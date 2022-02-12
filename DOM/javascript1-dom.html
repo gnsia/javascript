@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./javascript1-dom.js"></script>
+</head>
+
+<body style="display: flex;
+            flex-direction: column;
+            align-items: center;">
+    
+    <!-- SECTION-7 -->
+    <section id="section7">
+        <h1>Ex:7 노드 복제와 템플릿 태그</h1>
+        <div>
+            <input type="button" class="clone-button" value="복제">
+            <input type="button" class="template-button" value="템플릿복제">
+        </div>
+        <template>
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+        <table border="1" class="notice-list">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성일</th>
+                    <th>작성자</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>1</td>
+                    <td><a href="">자바스크립트를 아세요?</a></td>
+                    <td>2022-02-12</td>
+                    <td>gnsia</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="">니들이 자바 스크립트를 알어?</a></td>
+                    <td>2022-02-12</td>
+                    <td>gnsia</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="">자바스크립트를 아시나요?</a></td>
+                    <td>2022-02-12</td>
+                    <td>gnsia</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="">자바스크립트?</a></td>
+                    <td>2022-02-12</td>
+                    <td>gnsia</td>
+                    <td>5</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </section>
+    <hr>
+
+    <!-- SECTION-6 -->
+    <section id="section6">
+        <h1>Ex:6 노드 조작: 메뉴 추가 (CreateTextNode, Element</h1>
+        <div>
+            <input name="title" class="title-input">
+            <input type="button" class="add-button" value="추가">
+            <input type="button" class="del-button" value="삭제">
+        </div>
+        <ul class="menu-list">
+            <li><a href="">aaa</a></li>
+            <li><a href="">bbb</a></li>
+        </ul>
+    </section>
+    <hr>
+
+    <section id="section5">
+        <h1>Ex:5 Element node 속성 & CSS 속성</h1>
+        <div>
+            <select id="img-select">
+                <option value="">--Please choose an image--</option>
+                <option value="surf1.jpg">Suffer On The Big Wave</option>
+                <option value="surf2.jpg">Wahine</option>
+                <option value="surf3.jpg">Old Suffers Lying On The Beach</option>
+                <option value="surf4.jpg">Old Suffers</option>
+            </select>
+            <input type="color" class="color-input">
+            <input class="change-button" type="button" value="변경하기"/>
+        </div>
+        <div>
+            <img class="image" src="" 
+            style="width: 350px;">
+        </div>
+    </section>
+    <hr>
+    <section id="section4">
+        <h1>Ex:4 childNodes를 이용한 노드 선택</h1>
+        <div class="box">
+            <input />
+            <input />
+        </div>
+    </section>
+    <hr>
+    <section id="section3">
+        <h1>Ex:3 Selecors API Level1</h1>
+        <div>
+            <input class="txt-x" type="text" value="0" dir="rtl" />
+            +
+            <input class="txt-y" type="text" value="0" dir="rtl" />
+            <input class="btn-add" type="button" value="=" />
+            <input class="txt-result" type="text" value="0" dir="rtl" readonly />
+        </div>
+    </section>
+    <hr>
+    <section id="section2">
+        <h1>Ex:2 엘리먼트 선택 개선하기</h1>
+        <div>
+            <input class="txt-x" type="text" value="0" dir="rtl" />
+            +
+            <input class="txt-y" type="text" value="0" dir="rtl" />
+            <input class="btn-add" type="button" value="=" />
+            <input class="txt-result" type="text" value="0" dir="rtl" readonly />
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h1>Ex:1 계산기 프로그램</h1>
+        <div>
+            <input id="txt-x" type="text" value="0" dir="rtl" />
+            +
+            <input id="txt-y" type="text" value="0" dir="rtl" />
+            <input id="btn-add" type="button" value="=" />
+            <input id="txt-result" type="text" value="0" dir="rtl" readonly />
+        </div>
+    </section>
+</body>
+
+</html>
