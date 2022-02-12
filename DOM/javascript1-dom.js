@@ -1,4 +1,36 @@
-// // Ex:8 노드 삽입과 순서 바꾸기
+// Ex:9 다중 노드 선택 방법과 일괄삭제, 노드의 자리 바꾸기
+window.addEventListener("load", function () {
+    var section = this.document.querySelector("#section9");
+    var noticeList = section.querySelector(".notice-list");
+    var tbodyNode = noticeList.querySelector("tbody");
+    var allCheckbox = section.querySelector(".all-check");
+    var delButton = section.querySelector(".del-button");
+    var swapButton = section.querySelector(".swap-button");
+    
+    var currentNode = tbodyNode.firstElementChild;
+
+    allCheckbox.onchange = function() {
+        var inputs = tbodyNode.querySelectorAll("input[type='checkbox']");
+        for(var i=0; i<inputs.length; i++ ) {
+            inputs[i].checked=allCheckbox.checked;
+        }
+    }
+
+    delButton.onclick = function() {
+        var inputs = tbodyNode.querySelectorAll("input[type='checkbox']:checked");
+        console.log(inputs.length);
+        for(var i=0; i<inputs.length; i++) {
+            inputs[i].parentElement.parentElement.remove();
+        }
+    };
+
+    swapButton.onclick = function() {
+        
+    };
+
+});
+
+// Ex:8 노드 삽입과 순서 바꾸기
 window.addEventListener("load", function () {
     var section = this.document.querySelector("#section8");
     var noticeList = section.querySelector(".notice-list");
@@ -28,50 +60,6 @@ window.addEventListener("load", function () {
         // tbodyNode.removeChild(currentNode);
         // tbodyNode.insertBefore(currentNode, prevNode);
         currentNode.insertAdjacentElement("afterend", prevNode);
-    };
-
-});
-window.addEventListener("load", function () {
-
-    var notices = [
-        {id:5, title:"잡아 슥흐릳흐?", regDate:"2022-02-13", writerId:"gnsia", hit:"100"},
-        {id:6, title:"잠바 스크래치?", regDate:"2022-02-13", writerId:"gnsia", hit:"1000"},
-    ]
-
-    var section = this.document.querySelector("#section7");
-    var noticeList = section.querySelector(".notice-list");
-    var tbodyNode = noticeList.querySelector("tbody");
-    var cloneButton = section.querySelector(".clone-button");
-    var templateButton = section.querySelector(".template-button");
-    
-    cloneButton.onclick = function() {
-        var trNode = tbodyNode.querySelector("tr");
-        var cloneNode = trNode.cloneNode(true);
-        var tds = cloneNode.querySelectorAll("td");
-
-        tds[0].textContent = notices[0].id;
-        tds[1].innerHTML = '<a href="">' + notices[0].title + '</a>';
-        tds[2].textContent = notices[0].regDate;
-        tds[3].textContent = notices[0].writerId;
-        tds[4].textContent = notices[0].hit;
-
-        tbodyNode.appendChild(cloneNode);
-    };
-
-    templateButton.onclick = function() {
-        var template = section.querySelector("template");
-        for(var i=0; i<notices.length; i++) {
-            var cloneNode = document.importNode(template.content, true);
-            var tds = cloneNode.querySelectorAll("td");
-            tds[0].textContent = notices[i].id;
-            var aNode = tds[1].children[0];
-            aNode.href = notices[i].id;
-            aNode.textContent = notices[i].title;
-            tds[2].textContent = notices[i].regDate;
-            tds[3].textContent = notices[i].writerId;
-            tds[4].textContent = notices[i].hit;
-            tbodyNode.appendChild(cloneNode);
-        }
     };
 
 });
