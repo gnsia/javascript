@@ -1,11 +1,30 @@
+// Ex 5: 트리거
+window.addEventListener("load", function () {
+    var section = this.document.querySelector("#section5");
+    var fileButton = section.querySelector(".file-button");
+    var fileTriggerButton = section.querySelector(".file-trigger-button");
+    
+    fileTriggerButton.onclick = function() {
+        var event = new MouseEvent("click", {
+            'view':window,
+            'bubbles':true,
+            'cancelable':true
+        });
+        fileButton.dispatchEvent(event)
+    }
+});
+
 // Ex 4: 서로 다른 기능의 여러 버튼을 가진 화면에서 이벤트를 처리하는 방법
 window.addEventListener("load", function () {
     var section = this.document.querySelector("#section4");
     var tBody = section.querySelector(".notice-list tbody");
     tBody.onclick = function(e) {
+
+        e.preventDefault(); // 기본 행위 못하게 하는 설정
+
         var target = e.target;
     
-        if(target.nodeName != "INPUT") return;
+        if(target.nodeName != "A") return;
     
         if(target.classList.contains("sel-button")) {
             var tr = target.parentElement;
