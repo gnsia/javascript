@@ -17,6 +17,36 @@ align-items: center;">
         <a href="./javascript2-event.html">2. JavaScript1-Event</a>
     </header>
 
+    <!-- SECTION-10 -->
+    <section id="section10">
+        <h1>Ex 10: 드래그 앤 드랍</h1>
+        <style>
+            #section10 .container {
+                width: 800px;
+                height: 400px;
+                border: 1px solid black;
+                position: relative;
+                overflow: hidden;
+            }
+            #section10 .box {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                position: absolute;
+            }
+            .dropzone {
+                width: 200px;
+                height: 200px;
+                border: 1px solid gray;
+            }
+        </style>
+        <div class="container">
+            <div class="box" draggable="true"></div>
+        </div>
+        <div class="dropzone"></div>
+    </section>
+    <hr />
+
     <!-- SECTION-9 -->
     <section id="section9">
         <h1>Ex 9: 박스의 옵셋 영역 좌표 이용하기</h1>

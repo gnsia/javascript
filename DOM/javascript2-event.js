@@ -12,7 +12,7 @@ window.addEventListener("load", function () {
     console.log(left);
     console.log(top);
 
-    document.onmousedown = function(e) {
+    section.onmousedown = function(e) {
         if(e.target.classList.contains("box")) {
             dragging = true;
             current = e.target;
@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
         }
     };
 
-    document.onmousemove = function(e) {
+    section.onmousemove = function(e) {
         if(!dragging) return;
         // 현재 페이지 상에서의 x값 - 박스를 클릭한 지점에서의 x값 - 페이지 상에서 컨테이너의 x값 
         var x = e.pageX-offset.x-left;
@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
         status.innerText = "(x, y):("+x+","+y+")";
     };
 
-    document.onmouseup = function(e) {
+    section.onmouseup = function(e) {
         dragging = false;
     };
 });
