@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./javascript2-event.js"></script>
+</head>
+
+<body style="display: flex;
+flex-direction: column;
+align-items: center;">
+    <header>
+        <a href="./javascript1-dom.html">1. JavaScript1-DOM</a>
+        <a href="./javascript2-event.html">2. JavaScript1-Event</a>
+    </header>
+
+    <!-- 연습문제 : 1 -->
+    <section id="section1-1">
+        <h1>연습문제 1-선택된 레코드 삭제하기:event target</h1>
+        <table border="1" class="notice-list">
+            <thead>
+                <tr>
+                    <td>번호</td>
+                    <td>제목</td>
+                    <td>작성일</td>
+                    <td>작성자</td>
+                    <td>조회수</td>
+                    <td>관리</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="1">자바스크립트란..</a></td>
+                    <td>2019-01-25</td>
+                    <td>newlec</td>
+                    <td>2</td>
+                    <td><input type="button" class="del-button" value="삭제" /></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="2">유투브에 끌려다니지 않으려고 했는데....ㅜㅜ..</a></td>
+                    <td>2019-01-25</td>
+                    <td>newlec</td>
+                    <td>0</td>
+                    <td><input type="button" class="del-button" value="삭제" /></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="3">기본기가 튼튼해야....</a></td>
+                    <td>2019-01-25</td>
+                    <td>newlec</td>
+                    <td>1</td>
+                    <td><input type="button" class="del-button" value="삭제" /></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="4">근데 조회수가 ㅜㅜ..</a></td>
+                    <td>2019-01-25</td>
+                    <td>newlec</td>
+                    <td>0</td>
+                    <td><input type="button" class="del-button" value="삭제" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <hr />
+
+    <!-- SECTION-1 -->
+    <section id="section1">
+        <h1>Ex 1: 선택된 이미지 보여주기: event target</h1>
+        <div>
+            <img class="img" src="../images/surf1.jpg" style="width: 100px;">
+            <img class="img" src="../images/surf2.jpg" style="width: 100px;" >
+            <img class="img" src="../images/surf3.jpg" style="width: 100px;">
+            <img class="img" src="../images/surf4.jpg" style="width: 100px;" >
+        </div>
+        <div>
+            <img class="current-img" src="../images/surf1.jpg"  style="width: 400px;">
+        </div>
+    </section>
+
+</body>
+
+</html>
