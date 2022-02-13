@@ -1,3 +1,27 @@
+// Ex 4: 서로 다른 기능의 여러 버튼을 가진 화면에서 이벤트를 처리하는 방법
+window.addEventListener("load", function () {
+    var section = this.document.querySelector("#section4");
+    var tBody = section.querySelector(".notice-list tbody");
+    tBody.onclick = function(e) {
+        var target = e.target;
+    
+        if(target.nodeName != "INPUT") return;
+    
+        if(target.classList.contains("sel-button")) {
+            var tr = target.parentElement;
+            for(; tr.nodeName != "TR"; tr=tr.parentElement);
+            tr.style.background = "yellow";
+        }
+        else if(target.classList.contains("edit-button")) {
+
+        }
+        else if(target.classList.contains("del-button")) {
+
+        }
+    }
+});
+
+
 // Ex 3: 이벤트 버블링 멈추기
 window.addEventListener("load", function() {
     var section = this.document.querySelector("#section3");
